@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Prompt", sans-serif;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 15%;
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+}
+
+.logo_poly_section {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.logo_polyrayong {
+    width: 30px;
+}
+
+.poly_text {
+    text-decoration: none;
+    line-height: 15px;
+}
+
+.image_home2 {
+    width: 70%;
+}
+
+.content_section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.welcome {
+    color: #FEFEFD;
+    font-weight: 300;
+    font-size: 13px;
+    margin: 20px 0 14px 0;
+}
+
+.awaken {
+    width: 15%;
+    cursor: pointer;
+}
+
+.logo_polyland {
+    width: 39%;
+}
+
+.character_image {
+    width: 35%;
+}
+
+button {
+    all: unset;
+}
+
+.this_website {
+    font-size: 10px;
+    font-weight: 300;
+    color: #fefefd86;
+    
+}
+
+/* ! Story Section */
+
+.story_section {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+
+.story_image {
+    width: 30%;
+}
+
+.story {
+    width: 40%;
+    font-size: 17px;
+    color: #FEFEFD;
+    margin: 40px 0;
+}
+
+.story_start_btn {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #FEFEFD;
+    height: 50px;
+    width: 150px;
+    border-radius: 7px;
+    background-color: #2b65ec;
+    box-shadow: 0 0 50px #2b65ecdd;
+    }
+
+/* ! Quiz Section */
+
+.quiz_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ! Progress Bar */
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+
+.progress_bar {
+    width: 80%;
+    max-width: 400px;
+    height: 20px;
+    background-color: #FEFEFD;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #FEFEFDdd;
+    /* overflow: hidden; */
+    margin: 40px 0 0 0;
+}
+
+.progress_bar_inside {
+    background-color: #2b65ec;
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #2b65ecdd;
+    transition: width 0.5s ease;
+}
+
+.question {
+    margin: 2% 30%;
+    text-align: center;
+    color: #FEFEFD;
+    font-size: 15.2px;
+}
+
+.quiz_image {
+    width: 20%;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 2.5% 0;
+}
+.answer_choice {
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    color: #FEFEFD;
+    height: 58px;
+    width: 400px;
+    border-radius: 7px;
+    background-color: #232323;
+    box-shadow: 0 0 50px #2b65ec89;
+    padding: 0 10px;
+}
+
+.result_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FEFEFD;
+    text-align: center;
+    margin: 50px 20%;
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        margin: 2% 5%; /* ลด margin ลงให้เหมาะกับจอเล็ก */
+    }
+
+    .image_home {
+        width: 650px;
+}
+
+    .image_home2 {
+        width: 650px;
+    }
+
+    .welcome {
+        font-size: 10px;
+    }
+
+    .this_website {
+        font-size: 8px;
+    }
+
+    .awaken {
+    width: 45%;
+}
+
+    .story {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .quiz_image {
+        width: 50%; /* ขยายรูปให้ใหญ่ขึ้นในจอเล็ก */
+    }
+
+    .answer_choice {
+        width: 90%; /* ปรับปุ่มให้กินพื้นที่เต็มจอมากขึ้น */
+        font-size: 12px;
+    }
+
+    .progress_bar {
+        width: 90%;
+    }
+}

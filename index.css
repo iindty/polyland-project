@@ -12,6 +12,7 @@ body {
     width: 100vw; /* ✅ กำหนดเต็มจอ */
     min-height: 100vh; /* ให้สูงเท่าหน้าจอ */
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html, body {
@@ -24,8 +25,8 @@ html, body {
 }
 
 .container {
-    width: 100vw;
-    margin: 1% 15%;
+    width: 73%;
+    margin: 8px 0;
 }
 
 .page {
@@ -101,6 +102,7 @@ button {
     font-size: 10px;
     font-weight: 300;
     color: #fefefd86;
+    margin: 10px 0 0 0;
     
 }
 
@@ -221,7 +223,7 @@ button {
 
 @media screen and (max-width: 414px) {
     body {
-        margin: 2% 5%; /* ลด margin ลงให้เหมาะกับจอเล็ก */
+        
     }
 
     .image_home {
@@ -260,5 +262,14 @@ button {
 
     .progress_bar {
         width: 90%;
+    }
+
+    .question {
+        font-size: 13px;
+        margin: 2% 0;
+    }
+
+    .answer_choice {
+        font-size: 11px;
     }
 }

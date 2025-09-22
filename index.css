@@ -209,7 +209,7 @@ button {
     margin: 50px 20%;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 414px) {
     body {
         margin: 2% 5%; /* ลด margin ลงให้เหมาะกับจอเล็ก */
     }

@@ -232,20 +232,24 @@ button {
     }
 
     .welcome {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .this_website {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .awaken {
     width: 45%;
 }
 
+    .story_image {
+        width: 60%;
+    }
+
     .story {
         width: 90%;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .quiz_image {
@@ -255,7 +259,7 @@ button {
 
     .answer_choice {
         width: 90%; /* ปรับปุ่มให้กินพื้นที่เต็มจอมากขึ้น */
-        font-size: 12px;
+        font-size: 125x;
     }
 
     .progress_bar {
@@ -263,11 +267,11 @@ button {
     }
 
     .question {
-        font-size: 14px;
+        font-size: 17px;
         margin: 2% 0;
     }
 
     .answer_choice {
-        font-size: 11px;
+        font-size: 14px;
     }
 }

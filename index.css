@@ -232,11 +232,11 @@ button {
     }
 
     .welcome {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .this_website {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .awaken {
@@ -249,7 +249,8 @@ button {
     }
 
     .quiz_image {
-        width: 50%; /* ขยายรูปให้ใหญ่ขึ้นในจอเล็ก */
+        width: 70%; /* ขยายรูปให้ใหญ่ขึ้นในจอเล็ก */
+        margin: 13px 0;
     }
 
     .answer_choice {
@@ -262,11 +263,11 @@ button {
     }
 
     .question {
-        font-size: 13px;
+        font-size: 14px;
         margin: 2% 0;
     }
 
     .answer_choice {
-        font-size: 10px;
+        font-size: 11px;
     }
 }

@@ -261,7 +261,7 @@ button {
     }
 
     .answer_choice {
-        width: 90%; /* ปรับปุ่มให้กินพื้นที่เต็มจอมากขึ้น */
+        width: 300px;
         font-size: 125x;
     }
 

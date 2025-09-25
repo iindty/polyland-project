@@ -262,7 +262,7 @@ button {
 
     .answer_choice {
         width: 300px;
-        font-size: 125x;
+        font-size: 12px;
     }
 
     .progress_bar {
@@ -274,7 +274,4 @@ button {
         margin: 2% 0;
     }
 
-    .answer_choice {
-        font-size: 11px;
-    }
 }

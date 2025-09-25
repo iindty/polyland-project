@@ -256,13 +256,13 @@ button {
     }
 
     .quiz_image {
-        width: 70%; /* ขยายรูปให้ใหญ่ขึ้นในจอเล็ก */
+        width: 70%;
         margin: 13px 0;
     }
 
     .answer_choice {
         width: 300px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .progress_bar {

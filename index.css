@@ -366,4 +366,69 @@ h2 {
         margin-top: 13px;
     }
 
+    .result_section {
+        width: 90%; /* ลดขนาดกล่องให้พอดีหน้าจอ */
+        padding: 20px 15px;
+        margin: 30px auto; /* กึ่งกลางแนวนอน */
+        border-radius: 15px;
+        box-shadow: 0 0 20px #2b65ecaa;
+    }
+
+    .result_section.glow {
+        width: 90%;
+        padding: 30px 20px;
+        margin: 40px auto;
+        border-radius: 20px;
+        box-shadow: 0 0 30px #2b65ec, inset 0 0 15px #1b1b40;
+        gap: 15px;
+    }
+
+    .char_img {
+        width: 60%; /* ลดขนาดรูปภูติ */
+        margin-bottom: 10px;
+    }
+
+    .graph {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .bar {
+        height: 8px; /* ลดความสูงของกราฟ */
+        margin-bottom: 8px;
+    }
+
+    .fill {
+        height: 100%;
+    }
+
+    .desc, .keywords, .suitable {
+        font-size: 0.85rem; /* ลดข้อความ */
+        line-height: 1.4;
+        text-align: center; /* กึ่งกลาง */
+    }
+
+    .keywords {
+        font-size: 0.8rem;
+    }
+
+    .suitable {
+        font-size: 0.85rem;
+    }
+
+    .name {
+        font-size: 1.8rem; /* ลดชื่อ */
+    }
+
+    .result_head_text {
+        line-height: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .restart_btn {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
 }

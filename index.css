@@ -385,7 +385,7 @@ h2 {
 
     .char_img {
         width: 60%; /* ลดขนาดรูปภูติ */
-        margin-bottom: 10px;
+        height: 60%;
     }
 
     .graph {
@@ -425,10 +425,6 @@ h2 {
         font-size: 1.2rem;
     }
 
-    .restart_btn {
-        width: 80%;
-        font-size: 14px;
-        padding: 10px 0;
-    }
+
 
 }

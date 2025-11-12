@@ -183,6 +183,7 @@ button {
 
 .question {
     margin: 2% 30%;
+    margin-top: 13px;
     text-align: center;
     color: #FEFEFD;
     font-size: 15.2px;
@@ -272,6 +273,7 @@ button {
     .question {
         font-size: 17px;
         margin: 2% 0;
+        margin-top: 13px;
     }
 
 }

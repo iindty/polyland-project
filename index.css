@@ -130,7 +130,7 @@ button {
     margin: 40px 0;
 }
 
-.story_start_btn {
+.all_btn {
     cursor: pointer;
     font-size: 20px;
     font-weight: 500;
@@ -212,7 +212,14 @@ button {
     padding: 0 10px;
 }
 
+.result_page {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
 .result_section {
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,6 +227,9 @@ button {
     color: #FEFEFD;
     text-align: center;
     margin: 50px 20%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #2b65ecdd;
+    
 }
 
 @media screen and (max-width: 414px) {

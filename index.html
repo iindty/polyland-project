@@ -44,7 +44,7 @@
             <div class="story_section">
                 <img src="./assets/image_coming_soon.jpg" alt="Story" class="story_image">
                 <p class="story">คุณคือนักเรียน-นักศึกษาที่กำลังค้นหาเส้นทางการเรียนต่อทางสายอาชีพของตัวเอง วันนี้คุณมาถึง POLYLAND ที่เต็มไปด้วยผู้คนและตึกเรียน แต่บรรยากาศกว้างขวางกลับทำให้คุณรู้สึกเหมือนกำลังหลงทาง</p>
-                <button id="story-start-btn" class="story_start_btn" type="button">Let's go</button>
+                <button id="story-start-btn" class="story_start_btn all_btn" type="button">Let's go</button>
             </div>
         </div>
 
@@ -220,37 +220,38 @@
 
         <!--! End Story -->
 
-        <div id="end-page" class="page active">
+        <div id="end-page" class="page">
             <div class="story_section">
                 <img src="./assets/image_coming_soon.jpg" alt="Story" class="story_image">
                 <p class="story">ผลลัพธ์นี้อาจไม่ตรงทุกอย่าง แต่ก็พอให้ลองคิดดูได้นะ จำไว้ว่าเลือกสิ่งที่ชอบ สิ่งที่สนใจ หรือสิ่งที่มั่นใจที่สุด เพราะเมื่อเราเลือกสิ่งที่เข้ากับตัวเอง การเรียนก็จะสนุกและมีความหมายมากขึ้น~ พร้อมจะไปดูผลลัพธ์ของตัวเองแล้วรึยัง?</p>
-                <button id="story-end-btn" class="story_end_btn" type="button">Result</button>
+                <button id="story-end-btn" class="story_end_btn all_btn" type="button">Result</button>
             </div>
         </div>
 
         <!--! Result Pages -->
-        <div id="result-tec" class="page">
+        <div id="result-tec" class="result_page page active">
             <div class="result_section">
-                <h2>คุณเหมาะกับสายคอมพิวเตอร์</h2>
+                <h2>คุณคือ ..</h2>
+                <h2>ภูติแห่งกลไก</h2>
                 <p>คุณสนุกกับการลองทำสิ่งใหม่ เรียนรู้จากการลงมือทำ และชอบเทคโนโลยีหรือโปรแกรมต่าง ๆ</p>
             </div>
         </div>
 
-        <div id="result-mkt" class="page">
+        <div id="result-mkt" class="result_page page">
             <div class="result_section">
                 <h2>คุณเหมาะกับสายการตลาด</h2>
                 <p>คุณกล้าเสี่ยง ลองสิ่งใหม่ และสนุกกับการสื่อสารหรือทำงานร่วมกับผู้อื่นเพื่อสร้างไอเดียใหม่ ๆ</p>
             </div>
         </div>
 
-        <div id="result-acc" class="page">
+        <div id="result-acc" class="result_page page">
             <div class="result_section">
                 <h2>คุณเหมาะกับสายบัญชี</h2>
                 <p>คุณรอบคอบ ชอบวิเคราะห์ จัดลำดับขั้นตอน และสนุกกับการวางแผนและจัดการรายละเอียด</p>
             </div>
         </div>
 
-        <div id="result-log" class="page">
+        <div id="result-log" class="result_page page">
             <div class="result_section">
                 <h2>คุณเหมาะกับสายโลจิสติกส์</h2>
                 <p>คุณชอบความเป็นระเบียบ วางแผนการทำงาน และสนุกกับการจัดระบบให้ทุกอย่างราบรื่น</p>
@@ -273,11 +274,11 @@ let currentPage = 0;
 const score = { tec:0, mkt:0, acc:0, log:0 };
 
 // -------------------- แสดงหน้า --------------------
-function showPage(index) {
-    pages.forEach(p => p.classList.remove('active'));
-    pages[index].classList.add('active');
-    currentPage = index; 
-    updateProgressBar();
+// function showPage(index) {
+//     pages.forEach(p => p.classList.remove('active'));
+//     pages[index].classList.add('active');
+//     currentPage = index; 
+//     updateProgressBar();
 }
 
 // -------------------- อัปเดต progress bar --------------------
@@ -304,17 +305,29 @@ answerBtns.forEach(btn => {
         const type = btn.dataset.type;
         score[type]++;
 
-        if(currentPage < pages.length - 1 && pages[currentPage+1].classList.contains('quiz_section') || pages[currentPage+1].id.includes('quiz-page')) {
-            showPage(currentPage + 1);
-        } else {
-            // -------------------- แสดงผลลัพธ์ --------------------
+        const nextPage = currentPage + 1;
+
+        // ถ้ามีหน้าถัดไปและเป็นหน้า quiz-page ให้ไปต่อ
+        if (nextPage < pages.length && pages[nextPage].id.includes('quiz-page')) {
+            showPage(nextPage);
+        } 
+        // ถ้าหน้าถัดไปคือ end-page ให้ไปหน้านั้น
+        else if (nextPage < pages.length && pages[nextPage].id === 'end-page') {
+            showPage(nextPage);
+        } 
+        // ถ้าไม่มีหน้าถัดไปแล้ว (จบข้อสุดท้าย) ให้ไปหน้า result
+        else {
             const maxType = Object.keys(score).reduce((a,b) => score[a] > score[b] ? a : b);
+            showResult(maxType);
         }
     });
 });
 
 // -------------------- ปุ่มเข้าหน้า result --------------------
-storyEndBtn.addEventListener("click", () => showResult(maxType));
+storyEndBtn.addEventListener("click", () => {
+    const maxType = Object.keys(score).reduce((a,b) => score[a] > score[b] ? a : b);
+    showResult(maxType);
+});
 
 // -------------------- แสดงหน้า result --------------------
 function showResult(type) {

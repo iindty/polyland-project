@@ -212,25 +212,105 @@ button {
     padding: 0 10px;
 }
 
-.result_page {
-    display: block;
-    align-items: center;
-    justify-content: center;
-}
-
 .result_section {
-    width: 500px;
+    width: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #FEFEFD;
     text-align: center;
-    margin: 50px 20%;
+    margin: 50px auto; /* ✅ auto จะทำให้มันอยู่ตรงกลางแนวนอน */
+    padding: 0 30px;
     border-radius: 10px;
     box-shadow: 0 0 30px #2b65ecdd;
-    
 }
+
+.result_head_text {
+    line-height: 2.5rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    color: #5b8bff;
+}
+
+.result_section.glow {
+  width: 650px;
+  margin: 80px auto;
+  padding: 50px 40px;
+  border-radius: 25px;
+  background: #0a0a1a;
+  box-shadow: 0 0 40px #2b65ec, inset 0 0 20px #1b1b40;
+  color: #FEFEFD;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 40px #2b65ec, inset 0 0 20px #1b1b40; }
+  50% { box-shadow: 0 0 60px #5b8bff, inset 0 0 25px #2b65ec; }
+}
+
+.char_img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  /* box-shadow: 0 0 20px #2b65ecaa; */
+  margin-bottom: 15px;
+}
+
+.graph {
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+}
+
+.bar {
+  width: 100%;
+  height: 12px;
+  background: #1f1f3d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2b65ec, #5b8bff);
+  border-radius: 10px;
+}
+
+.desc, .keywords, .suitable {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0f8;
+  max-width: 520px;
+}
+
+.keywords {
+  font-style: italic;
+  color: #7aa7ff;
+}
+
+
+h6 {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.restart_btn {
+    display: block;
+    margin: 20px auto; /* กึ่งกลางแนวนอน */
+}
+
 
 @media screen and (max-width: 414px) {
 
